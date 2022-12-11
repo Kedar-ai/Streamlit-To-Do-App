@@ -72,6 +72,7 @@ def main():
 
 
 	elif choice == "Update":
+		st_lottie(lottie_coding, height=300, key="Coding")
 		st.subheader("Edit Items")
 		with st.beta_expander("Current Data"):
 			result = view_all_data()
@@ -110,6 +111,7 @@ def main():
 
 
 	elif choice == "Delete":
+		st_lottie(lottie_coding, height=300, key="Coding")
 		st.subheader("Delete")
 		with st.beta_expander("View Data"):
 			result = view_all_data()
