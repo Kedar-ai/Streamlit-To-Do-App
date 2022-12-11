@@ -55,13 +55,13 @@ def main():
 	elif choice == "Read":
 		# st.subheader("View Items")
 		st_lottie(lottie_coding, height=300, key="Coding")
-		with st.expander("View All"):
+		with st.beta_expander("View All"):
 			result = view_all_data()
 			# st.write(result)
 			clean_df = pd.DataFrame(result,columns=["Task","Status","Date"])
 			st.dataframe(clean_df)
 
-		with st.expander("Task Status"):
+		with st.beta_expander("Task Status"):
 			task_df = clean_df['Status'].value_counts().to_frame()
 			# st.dataframe(task_df)
 			task_df = task_df.reset_index()
@@ -73,7 +73,7 @@ def main():
 
 	elif choice == "Update":
 		st.subheader("Edit Items")
-		with st.expander("Current Data"):
+		with st.beta_expander("Current Data"):
 			result = view_all_data()
 			# st.write(result)
 			clean_df = pd.DataFrame(result,columns=["Task","Status","Date"])
@@ -102,7 +102,7 @@ def main():
 				edit_task_data(new_task,new_task_status,new_task_due_date,task,task_status,task_due_date)
 				st.success("Updated ::{} ::To {}".format(task,new_task))
 
-			with st.expander("View Updated Data"):
+			with st.beta_expander("View Updated Data"):
 				result = view_all_data()
 				# st.write(result)
 				clean_df = pd.DataFrame(result,columns=["Task","Status","Date"])
@@ -111,7 +111,7 @@ def main():
 
 	elif choice == "Delete":
 		st.subheader("Delete")
-		with st.expander("View Data"):
+		with st.beta_expander("View Data"):
 			result = view_all_data()
 			# st.write(result)
 			clean_df = pd.DataFrame(result,columns=["Task","Status","Date"])
@@ -123,7 +123,7 @@ def main():
 			delete_data(delete_by_task_name)
 			st.warning("Deleted: '{}'".format(delete_by_task_name))
 
-		with st.expander("Updated Data"):
+		with st.beta_expander("Updated Data"):
 			result = view_all_data()
 			# st.write(result)
 			clean_df = pd.DataFrame(result,columns=["Task","Status","Date"])
