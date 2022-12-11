@@ -1,13 +1,13 @@
 import requests
 import streamlit as st
-import streamlit_tags as stt
+# import streamlit_tags as tags
 import pandas as pd 
 from db_fxns import * 
 import streamlit.components.v1 as stc
 from streamlit_lottie import st_lottie
 
 # st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
-stt.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="centered")
+st.beta_set_page_config(page_title="My Webpage", page_icon=":tada:", layout="centered")
 # Data Viz Pkgs
 import plotly.express as px 
 
