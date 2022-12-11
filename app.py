@@ -37,7 +37,7 @@ def main():
 	if choice == "Create":
 		st_lottie(lottie_coding, height=300, key="Coding")
 		st.subheader("Add Item")
-		col1,col2 = st.columns(2)
+		col1,col2 = st.beta_columns(2)
 		
 		with col1:
 			task = st.text_area("Task To Do")
